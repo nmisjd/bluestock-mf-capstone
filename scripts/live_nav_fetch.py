@@ -1,5 +1,8 @@
 import requests
 import pandas as pd
+import os
+
+os.makedirs("data/raw/live_nav", exist_ok=True)
 
 scheme_codes = {
     "HDFC_Top100": 125497,
@@ -18,13 +21,13 @@ for name, code in scheme_codes.items():
 
     data = response.json()
 
-    nav_data = data.get("data", [])
+    nav_data = data["data"]
 
     df = pd.DataFrame(nav_data)
 
-    output_path = f"data/raw/{name}_nav.csv"
+    output_path = f"data/raw/live_nav/{name}.csv"
 
     df.to_csv(output_path, index=False)
 
-    print(f"{name} saved successfully.")
-
+    print(f"{name} fetched successfully.")
+    

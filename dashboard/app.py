@@ -2,7 +2,24 @@ import streamlit as st
 import pandas as pd
 import plotly.express as px
 from pathlib import Path
+st.markdown("""
+<style>
+.main {
+    background-color: #0E1117;
+}
 
+h1, h2, h3 {
+    color: #1E88E5;
+}
+
+[data-testid="metric-container"] {
+    background-color: #262730;
+    padding: 15px;
+    border-radius: 10px;
+    border: 1px solid #1E88E5;
+}
+</style>
+""", unsafe_allow_html=True)
 # ==========================================
 # PAGE CONFIG
 # ==========================================

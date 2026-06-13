@@ -376,6 +376,6 @@ st.markdown(
     """
     **Mutual Fund Analytics Platform**  
     Bluestock Data Analyst Internship Capstone Project  
-    Developed by Sajid Ahmed
+    Developed by Sajeed Ahmed
     """
 )
